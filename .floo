@@ -1,0 +1,33 @@
+{
+<Family>
+<Address> <City> Mont-sur-Marchienne </City>
+<Street> rue Murmure des Grands Arbres </Street>
+<Number>5</Number>
+<zipcode>6032</zipcode>
+</Address>
+<Member> <Name> Veirman </Name> <Firstname> Bernard </Firstname>
+<birthdate>16/05/1963</birthdate><sex> male </sex> <role>father</role>
+<Description>
+</Description>
+</Member>
+<Member> <Name> Legrand </Name> <Firstname> Sylviane </Firstname>
+<birthdate>31/05/1957</birthdate><sex> female </sex> <role>conjoint</role>
+<Description>
+</Description>
+</Member>
+</Family>
+
+}
+<!ELEMENT Families (Family+)>
+<!ELEMENT Family (Address, Member+)>
+<!ELEMENT Address (City,Street,Number,zipcode)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT Street (#PCDATA)>
+<!ELEMENT Number (#PCDATA)>
+<!ELEMENT zipcode (#PCDATA)>
+<!ELEMENT Member (Name, Firstname,birthdate,sex,role,Description)>
+
+<!ELEMENT Qty (#PCDATA)>
+<!ATTLIST Qty unit CDATA #REQUIRED>
+<!ELEMENT Item (#PCDATA)>
+<!ELEMENT Instructions (#PCDATA)>

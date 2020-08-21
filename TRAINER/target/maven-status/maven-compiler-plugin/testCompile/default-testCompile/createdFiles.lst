@@ -1,0 +1,9 @@
+be\realdolmen\zoo\repository\RepositorySuite.class
+be\realdolmen\zoo\services\AnimalServiceTest.class
+be\realdolmen\zoo\repository\Slow.class
+be\realdolmen\zoo\repository\AnimalRepositoryTest.class
+be\realdolmen\zoo\util\TestDatabase.class
+be\realdolmen\zoo\ZooApplicationTest.class
+be\realdolmen\zoo\repository\DatabaseRule.class
+be\realdolmen\zoo\repository\FileWriterRule.class
+be\realdolmen\zoo\services\FoodServiceTest.class
