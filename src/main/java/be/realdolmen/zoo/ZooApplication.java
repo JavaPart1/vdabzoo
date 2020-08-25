@@ -1,14 +1,10 @@
 package be.realdolmen.zoo;
 
 import be.realdolmen.zoo.Commander.Commands;
-import be.realdolmen.zoo.command_pattern.ZooWorker;
-import be.realdolmen.zoo.command_pattern.commands.Command;
-import be.realdolmen.zoo.command_pattern.commands.ShowAnimalCommand;
-import be.realdolmen.zoo.util.Database;
+import be.realdolmen.zoo.command_pattern.commands.ZooWorker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Scanner;

@@ -1,7 +1,5 @@
 package be.realdolmen.zoo;
 
-import be.realdolmen.zoo.Commander;
-import be.realdolmen.zoo.ZooApplication;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;

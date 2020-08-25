@@ -1,6 +1,7 @@
 package be.realdolmen.zoo;
 
-import be.realdolmen.zoo.command_pattern.commands.*;
+import be.realdolmen.zoo.command_pattern.commands.commands.Command;
+import be.realdolmen.zoo.command_pattern.commands.commands.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

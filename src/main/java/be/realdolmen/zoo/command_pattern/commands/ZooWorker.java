@@ -1,6 +1,6 @@
-package be.realdolmen.zoo.command_pattern;
+package be.realdolmen.zoo.command_pattern.commands;
 
-import be.realdolmen.zoo.command_pattern.commands.Command;
+import be.realdolmen.zoo.command_pattern.commands.commands.Command;
 
 //this is the invoker
 public class ZooWorker {

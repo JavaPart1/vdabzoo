@@ -1,4 +1,4 @@
-package be.realdolmen.zoo.command_pattern.commands;
+package be.realdolmen.zoo.command_pattern.commands.commands;
 
 import be.realdolmen.zoo.domain.Animal;
 import be.realdolmen.zoo.domain.Food;
