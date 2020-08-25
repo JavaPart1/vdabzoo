@@ -1,5 +1,6 @@
 package be.realdolmen.zoo;
 
+import be.realdolmen.zoo.command_pattern.commands.CommandosMJ;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
@@ -25,7 +26,7 @@ public class ZooApplicationTest {
     @Test
     public void verifyShownCommands() throws InterruptedException {
         systemInMock.provideLines("0");
-        Commander.Commands chosenCommand = zooApplication.chooseCommand();
+        CommandosMJ chosenCommand = zooApplication.chooseCommand();
         // will create a string with a lineSeparator depending on the system OS lineSeparator settings (CRLF or LF)
         // LF = unix and macOs (\n)
         // CR = classic macOs (\r)
@@ -45,29 +46,29 @@ public class ZooApplicationTest {
     @Test
     public void verifyReturnShowAnimalCommand() throws InterruptedException {
         systemInMock.provideLines("0");
-        Commander.Commands chosenCommand = zooApplication.chooseCommand();
-        assertEquals(Commander.Commands.SHOW_ANIMAL, chosenCommand);
+        CommandosMJ chosenCommand = zooApplication.chooseCommand();
+        assertEquals(CommandosMJ.SHOW_ANIMAL, chosenCommand);
     }
 
     @Test
     public void verifyReturnAddAnimalCommand() throws InterruptedException {
         systemInMock.provideLines("1");
-        Commander.Commands chosenCommand = zooApplication.chooseCommand();
-        assertEquals(Commander.Commands.ADD_ANIMAL, chosenCommand);
+        CommandosMJ chosenCommand = zooApplication.chooseCommand();
+        assertEquals(CommandosMJ.ADD_ANIMAL, chosenCommand);
     }
 
     @Test
     public void verifyReturnRemoveAnimalCommand() throws InterruptedException {
         systemInMock.provideLines("2");
-        Commander.Commands chosenCommand = zooApplication.chooseCommand();
-        assertEquals(Commander.Commands.REMOVE_ANIMAL, chosenCommand);
+        CommandosMJ chosenCommand = zooApplication.chooseCommand();
+        assertEquals(CommandosMJ.REMOVE_ANIMAL, chosenCommand);
     }
 
     @Test
     public void verifyReturnFeedAnimalCommand() throws InterruptedException {
         systemInMock.provideLines("4");
-        Commander.Commands chosenCommand = zooApplication.chooseCommand();
-        assertEquals(Commander.Commands.FEED_ANIMAL, chosenCommand);
+        CommandosMJ chosenCommand = zooApplication.chooseCommand();
+        assertEquals(CommandosMJ.FEED_ANIMAL, chosenCommand);
     }
 
 } 

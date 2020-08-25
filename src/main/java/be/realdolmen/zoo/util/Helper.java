@@ -10,7 +10,8 @@ public class Helper {
 
     public static Properties loadPropertiesFile() {
         Properties prop = new Properties();
-        try (InputStream resourceAsStream = Helper.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream resourceAsStream = Helper.class.getClassLoader()
+                .getResourceAsStream("config.properties")) {
             prop.load(resourceAsStream);
         } catch (IOException e) {
             System.err.println("Unable to load properties file : " + "config.properties");

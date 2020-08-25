@@ -1,6 +1,6 @@
 package be.realdolmen.zoo;
 
-import be.realdolmen.zoo.Commander.Commands;
+import be.realdolmen.zoo.command_pattern.commands.CommandosMJ;
 import be.realdolmen.zoo.command_pattern.commands.ZooWorker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public class ZooApplication {
     private void start() {
         while (running) {
             try {
-                Commands command = chooseCommand();
+                CommandosMJ command = chooseCommand();
                 executeCommand(command);
             } catch (Exception e) {
                 logger.error("Mayday mayday Error! :", e);
@@ -36,7 +36,7 @@ public class ZooApplication {
 
     }
 
-    private void executeCommand(Commands command) {
+    private void executeCommand(CommandosMJ command) {
 
         //Example 1: Command pattern with reflection api
 //        try {
@@ -55,14 +55,14 @@ public class ZooApplication {
 
     }
 
-    Commands chooseCommand() throws InterruptedException {
+    CommandosMJ chooseCommand() throws InterruptedException {
         System.out.println("Available commands:");
-        for (Commands command : Commands.values()) {
+        for (CommandosMJ command : CommandosMJ.values()) {
             System.out.printf("\t%d. %s \n", command.ordinal(), command.getCommandDescription()); //instead of using a hard coded index, i'm using ordinal to get the position of the enum.
         }
         System.out.print("Choose a command: ");
         int command = scanner.nextInt();
-        Optional<Commands> commandOptional = Arrays.stream(Commands.values())
+        Optional<CommandosMJ> commandOptional = Arrays.stream(CommandosMJ.values())
                 .filter(command1 -> command1.ordinal() == command).findFirst(); //ordinal is the index of the enum and can be used to fetch the correct command
         if (!commandOptional.isPresent()) {
             logger.warn("Give in a correct number");
